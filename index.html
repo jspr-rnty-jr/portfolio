@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" class="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,9 @@
 <body>
     <header class="header">
         <div class="container">
+            <!-- <img src="assets/favicon.png" alt="image"> -->
             <h1 class="logo">My Portfolio</h1>
             <nav class="nav">
-                <img src="assets/favicon.png" alt="image">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -36,10 +36,60 @@
         <!-- HERO SECTION -->
 
         <!-- ABOUT SECTION -->
-        <section id="about" class="about section">
+        <section id="about">
             <div class="container">
-                <h2>About Me</h2>
-                <p>Write a brief introduction about yourself here. Highlight your skills, experiences, and what makes you unique.</p>
+              <h2 class="section-title load-hidden">About me</h2>
+              <div class="about-wrapper">
+                <div>
+                    <div class="about-wrapper__image load-hidden">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7ckN3PT3J5GMMayVLsjZN9455FdKWA1xzQ&s"
+                            alt="Profile Image"
+                        />
+                        </div>
+                        <div class="about-wrapper__socials">
+                            <h3>socials</h3>
+                            <p class="about-wrapper__social-text">
+                                This is where you can describe about yourself. The more you
+                                describe about yourself, the more chances you can!
+                            </p>
+                            <p class="about-wrapper__social-text">
+                                Extra Information about you! like hobbies and your goals.
+                            </p>
+                        </div>
+                </div>
+                <div>
+                    <div class="about-wrapper__info load-hidden">
+                        <p class="about-wrapper__info-text">
+                            This is where you can describe about yourself. The more you
+                            describe about yourself, the more chances you can!
+                        </p>
+                        <p class="about-wrapper__info-text">
+                            Extra Information about you! like hobbies and your goals.
+                        </p>
+                        <span class="">
+                            <a
+                            rel="noreferrer"
+                            target="_blank"
+                            class=""
+                            href="assets/resume.pdf"
+                            >
+                            View Resume
+                            </a>
+                        </span>
+                    </div>
+                    <div class="about-wrapper__skills">
+                        <h3>Skills</h3>
+                        <p class="about-wrapper__skills-text">
+                            This is where you can describe about yourself. The more you
+                            describe about yourself, the more chances you can!
+                        </p>
+                        <p class="about-wrapper__skills-text">
+                            Extra Information about you! like hobbies and your goals.
+                        </p>
+                    </div>
+                </div>
+              </div>
             </div>
         </section>
         <!-- ABOUT SECTION -->
@@ -47,7 +97,7 @@
         <!-- PROJECY SECTION -->
         <section id="projects" class="projects section">
             <div class="container">
-                <h2>My Projects</h2>
+                <h2 class="section-title load-hidden">My Projects</h2>
                 <div class="project">
                     <h3>Project 1</h3>
                     <p>Description of Project 1.</p>
@@ -73,5 +123,7 @@
     https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
     "></script>
     <script defer type="module" src="js/app.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>ScrollReveal().reveal('.about-wrapper__image, .section-title', { duration: 2000 });</script>
 </body>
 </html>

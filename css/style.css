@@ -1,9 +1,13 @@
 /* General Styles */
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F7E7CE;
+    background-color: #ffff;
     color: #1D201F;
     line-height: 1.6;
 }
@@ -75,6 +79,18 @@ body {
     animation-timeline: scroll();
 }
 
+/* Section */
+
+.section-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* text-decoration: underline; */
+    padding: 32px 0px;
+    margin: 0;
+    text-align: center;
+}
+
 /* Hero Section Styles */
 .hero {
     width: 100%;
@@ -91,6 +107,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 .hero-background{
     width: 100%;
@@ -112,21 +131,38 @@ body {
     font-size: 1.2rem;
 }
 
-/* Section Styles */
-.section {
-    padding: 3rem 0;
-    background-color: #F7E7CE;
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    column-gap: 64px;
+    margin-bottom: 50px;
 }
 
-.about,
+.about-wrapper__image img{
+    min-height: 250px;
+    width: 300px;
+}
+
+.about-wrapper__info {
+    padding: 32px;
+    flex: 0 1 50%;
+}
+
+.about-wrapper__info-text{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+
+/* projects */
 .projects {
-    background-color: #FFFFFF;
-    border-radius: 8px;
+    background-color: #1D201F;
     padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
 }
 
-.about h2,
 .projects h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -200,5 +236,18 @@ body {
 
     .projects .project p {
         font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-wrapper {
+        flex-wrap: wrap;
+    }
+    .about-wrapper__image img{
+        min-height: 200px;
+        width: 250px;
+    }
+    .about-wrapper__info{
+        flex: 1;
     }
 }
