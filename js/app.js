@@ -50,40 +50,40 @@ const defaultProps = {
       },
     },
     {
-      element: ".about-wrapper__image",
+      element: ".about-profile-image",
       animation: {
         delay: 600,
-        origin: "bottom",
+        origin: "left",
       },
     },
     {
-      element: ".about-wrapper__info",
+      element: ".about-profile-summary",
       animation: {
         delay: 1000,
         origin: window.innerWidth > 768 ? "left" : "bottom",
       },
     },
     {
-      element: ".project-wrapper__text",
+      element: ".about-profile-socials",
       animation: {
-        delay: 500,
+        delay: window.innerWidth > 768 ? 1200 : 500,
         origin: window.innerWidth > 768 ? "left" : "bottom",
       },
     },
     {
-      element: ".project-wrapper__image",
+      element: ".about-profile-skills",
       animation: {
-        delay: 1000,
+        delay: window.innerWidth > 768 ? 1150 : 1000,
         origin: window.innerWidth > 768 ? "right" : "bottom",
       },
     },
-    {
-      element: ".contact-wrapper",
-      animation: {
-        delay: 800,
-        origin: "bottom",
-      },
-    },
+    // {
+    //   element: ".contact-wrapper",
+    //   animation: {
+    //     delay: 800,
+    //     origin: "bottom",
+    //   },
+    // },
   ];
 
 const initScrollReveal = (targetElements, defaultProps) => {
