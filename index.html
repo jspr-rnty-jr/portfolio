@@ -9,199 +9,173 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
-    <!-- Header Section -->
-    <header id="navbar">
-        <nav class="navbar-container container">
+  <div id="top"></div>
+  <!-- Header Section -->
+  <header id="navbar">
+      <nav class="navbar-container container">
           <a href="#" class="home-link">
-            <div class="navbar-logo">
-                <img class="logo-img load-hidden" src="assets/favicon.png" alt="logo">
-            </div>
-            Xyper | Portfolio
+              <div class="navbar-logo">
+                  <img class="logo-img load-hidden" src="assets/favicon.png" alt="logo">
+              </div>
+              Xyper | Portfolio
           </a>
           <button
-            type="button"
-            id="navbar-toggle"
-            aria-controls="navbar-menu"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-            >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+              type="button"
+              id="navbar-toggle"
+              aria-controls="navbar-menu"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+          >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
           </button>
           <div id="navbar-menu" aria-labelledby="navbar-toggle">
-            <ul class="navbar-links">
-              <li class="navbar-item"><a class="navbar-link" href="#">Home</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="#">Contact</a></li>
-            </ul>
+              <ul class="navbar-links">
+                  <li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="#">Resumé</a></li>
+              </ul>
           </div>
-        </nav>
+      </nav>
+      <div class="scroll-progress-bar"></div>
+  </header>
+  <!-- /END Header Section -->
 
-        <div class="scroll-progress-bar"></div>
-      </header>
-    <!-- /END Header Section -->
+  <!-- **** Hero Section **** -->
+  <section id="hero">
+      <div id="particles-js"></div>
+      <div class="hero-wrapper container">
+          <div class="hero-content">
+              <h1 class="hero-heading load-hidden">
+                  Hi, I’m <span class="hero-name">Xyper</span>
+              </h1>
+              <h2 class="hero-subheading load-hidden">
+                  Exploring the World of Web Development, One Line of Code at a Time.
+              </h2>
+              <h2 class="hero-tagline load-hidden">
+                  Software Developer | Front-End | Back-End | Full-Stack
+              </h2>
+          </div>
+      </div>
+  </section>
+  <!-- /END Hero Section -->
 
-    <!-- **** Hero Section **** -->
-    <section id="hero">
-        <div id="particles-js"></div>
-        <div class="hero-container container">
-           <div class="hero-content">
-                <h1 class="hero-title load-hidden">
-                    Welcome, I am <span class="hero-name">Xyper</span>
-                </h1>
-                <h2 class="hero-tagline load-hidden">
-                    I'm a Web Developer.
-                </h2>
-                <div class="hero-cta load-hidden">
-                    <a rel="noopener noreferrer" class="cta-btn cta-btn--hero" href="#"
-                    > Resumé</a
-                    >
-                </div>
-           </div>
-        </div>
-    </section>
-    <!-- /END Hero Section -->
-
-
-    <!-- **** About Section **** -->
-     <section id="about">
-        <div class="about-container">
-          <div class="about-profile-image  load-hidden">
-              <img src="https://0.soompi.io/wp-content/uploads/2022/07/21101732/NewJeans-16-scaled.jpeg"
-              alt="profile-image"
-              >
+  <!-- **** About Section **** -->
+  <section id="about">
+      <div class="about-container">
+          <div class="about-profile-image load-hidden">
+              <img src="https://0.soompi.io/wp-content/uploads/2022/07/21101732/NewJeans-16-scaled.jpeg" alt="profile-image">
               <p class="about-profile__name">Xyper's baby</p>
           </div>
           <div class="about-profile-summary">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla cumque tempora voluptates labore illum quos exercitationem molestiae eos accusamus magnam provident, consequuntur dicta ratione quae corrupti iure beatae veritatis distinctio?
-              Repellendus, fugit? Hic sequi enim deleniti eligendi repudiandae id, accusantium, labore sunt doloribus, illo repellendus in distinctio ipsam laudantium totam nemo magni sed. Doloremque qui nobis sapiente corrupti. Qui, hic.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla cumque tempora voluptates labore illum quos exercitationem molestiae eos accusamus magnam provident, consequuntur dicta ratione quae corrupti iure beatae veritatis distinctio? Repellendus, fugit? Hic sequi enim deleniti eligendi repudiandae id, accusantium, labore sunt doloribus, illo repellendus in distinctio ipsam laudantium totam nemo magni sed. Doloremque qui nobis sapiente corrupti. Qui, hic.</p>
           </div>
           <div class="about-profile-socials">
-            <h2 class="about-profile-socials__header">Socials</h2>
-            <div class="about-profile-socials__card">
-              <div class="card">
-                facebook
+              <h2 class="about-profile-socials__header">Socials</h2>
+              <div class="about-profile-socials__card">
+                  <div class="card"><a href="https://facebook.com" target="_blank">Facebook</a></div>
+                  <div class="card"><a href="https://github.com" target="_blank">GitHub</a></div>
+                  <div class="card"><a href="https://linkedin.com" target="_blank">LinkedIn</a></div>
               </div>
-              <div class="card">
-                github
-              </div>
-              <div class="card">
-                linkedin
-              </div>
-            </div>
           </div>
           <div class="about-profile-skills">
-            <h2 class="about-profile-skills__header">Skill</h2>
-            <div class="about-profile-skills__card">
-              <div class="card">
-                <p>JS</p>
+              <h2 class="about-profile-skills__header">Skills</h2>
+              <div class="about-profile-skills__card">
+                  <div class="card"><p>JS</p></div>
+                  <div class="card"><p>HTML5</p></div>
+                  <div class="card"><p>CSS3</p></div>
               </div>
-              <div class="card">
-                <p>HTML5</p>
-              </div>
-              <div class="card">
-                <p>CSS3</p>
-              </div>
-            </div>
           </div>
-        </div>
-     </section>
-    <!-- **** /END About Section **** -->
+      </div>
+  </section>
+  <!-- /END About Section -->
 
-    <!-- **** Project Section **** -->
-     <section id="projects">
-       <div class="projects-container">
-        <div class="card projects-card load-hidden">
-          <div class="card-header">
-            <img src="assets/project-img.jpg" alt="project-snapshot">
+  <!-- **** Project Section **** -->
+  <section id="projects">
+      <div class="projects-container">
+          <div class="card projects-card load-hidden">
+              <div class="card-header">
+                  <img src="assets/project-img.jpg" alt="project-snapshot">
+              </div>
+              <div class="card-body">
+                  <div class="project-title">
+                      <h3>Title 1</h3>
+                  </div>
+                  <div class="project-desc">
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
+                  </div>
+              </div>
+              <div class="card-footer">
+                  <a href="#">Demo</a>
+                  <a href="#">Code</a>
+              </div>
           </div>
-          <div class="card-body">
-            <div class="project-title">
-              <h3>Title 1</h3>
+          <div class="card projects-card load-hidden">
+            <div class="card-header">
+                <img src="assets/project-img.jpg" alt="project-snapshot">
             </div>
-            <div class="project-desc">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
+            <div class="card-body">
+                <div class="project-title">
+                    <h3>Title 2</h3>
+                </div>
+                <div class="project-desc">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
+                </div>
             </div>
-          </div>
-          <div class="card-footer">
-            <a href="#">Demo</a>
-            <a href="#">Code</a>
-          </div>
+            <div class="card-footer">
+                <a href="#">Demo</a>
+                <a href="#">Code</a>
+            </div>
         </div>
         <div class="card projects-card load-hidden">
           <div class="card-header">
-            <img src="assets/project-img.jpg" alt="project-snapshot">
+              <img src="assets/project-img.jpg" alt="project-snapshot">
           </div>
           <div class="card-body">
-            <div class="project-title">
-              <h3>Title 2</h3>
-            </div>
-            <div class="project-desc">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
-            </div>
+              <div class="project-title">
+                  <h3>Title 3</h3>
+              </div>
+              <div class="project-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
+              </div>
           </div>
           <div class="card-footer">
-            <a href="#">Demo</a>
-            <a href="#">Code</a>
+              <a href="#">Demo</a>
+              <a href="#">Code</a>
           </div>
-        </div>
-        <div class="card projects-card load-hidden">
-          <div class="card-header">
+      </div>
+      <div class="card projects-card load-hidden">
+        <div class="card-header">
             <img src="assets/project-img.jpg" alt="project-snapshot">
-          </div>
-          <div class="card-body">
+        </div>
+        <div class="card-body">
             <div class="project-title">
-              <h3>Title 3</h3>
+                <h3>Title 4</h3>
             </div>
             <div class="project-desc">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
             </div>
-          </div>
-          <div class="card-footer">
+        </div>
+        <div class="card-footer">
             <a href="#">Demo</a>
             <a href="#">Code</a>
-          </div>
         </div>
-        <div class="card projects-card load-hidden">
-          <div class="card-header">
-            <img src="assets/project-img.jpg" alt="project-snapshot">
-          </div>
-          <div class="card-body">
-            <div class="project-title">
-              <h3>Title 3</h3>
-            </div>
-            <div class="project-desc">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quo impedit, esse, ad porro temporibus iure beatae corporis quibusdam eius officia asperiores praesentium deserunt quia et, inventore quidem nostrum autem.</p>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="#">Demo</a>
-            <a href="#">Code</a>
-          </div>
-        </div>
-       </div> 
-     </section>
-    <!-- **** /END Project Section **** -->
-    
-    <!-- **** Footer Section **** -->
-    <footer class="footer">
-          <p class="footer__text">
-            © 2024 -
-            <a rel="noreferrer" href="https://github.com/jspr-rnty-jr" target="_blank"
-              >Xyper</a
-            >
-          </p>
-        </div>
-      </footer>
-      <!-- /END Footer Section -->
+    </div>
+      </div> 
+  </section>
+  <!-- /END Project Section -->
+  
+  <!-- **** Footer Section **** -->
+  <footer class="footer">
+      <p class="footer__text">
+          © 2024 - <a rel="noreferrer" href="https://github.com/jspr-rnty-jr" target="_blank">Xyper</a>
+      </p>
+  </footer>
+  <!-- /END Footer Section -->
 
-    <script defer src="https://unpkg.com/scrollreveal"></script>
-    <script defer src="
-    https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
-    "></script>
-    <script defer type="module" src="js/app.js"></script>
+  <script defer src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script defer type="module" src="js/app.js"></script>
 </body>
 </html>

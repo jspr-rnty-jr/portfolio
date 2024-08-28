@@ -29,7 +29,14 @@ const defaultProps = {
       },
     },
     {
-      element: ".hero-title",
+      element: ".hero-heading",
+      animation: {
+        delay: 500,
+        origin: window.innerWidth > 768 ? "left" : "bottom",
+      },
+    },
+    {
+      element: ".hero-subheading",
       animation: {
         delay: 500,
         origin: window.innerWidth > 768 ? "left" : "bottom",
@@ -38,7 +45,7 @@ const defaultProps = {
     {
         element: ".hero-tagline",
         animation: {
-          delay: 750,
+          delay: 1000,
           origin: window.innerWidth > 768 ? "left" : "bottom",
         },
     },
@@ -84,13 +91,6 @@ const defaultProps = {
         origin: window.innerWidth > 768 ? "left" : "bottom",
       }
     }
-    // {
-    //   element: ".contact-wrapper",
-    //   animation: {
-    //     delay: 800,
-    //     origin: "bottom",
-    //   },
-    // },
   ];
 
 const initScrollReveal = (targetElements, defaultProps) => {
