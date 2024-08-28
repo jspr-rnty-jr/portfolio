@@ -273,12 +273,16 @@ body {
 /* HERO SECTION END */
 
 /* ABOUT SECTION START */
+/* #about {
+    height: 100vh;
+    width: 100%;
+} */
+
 .about-container {
     display: grid;
     justify-items: center;
     font-size: 0.9rem;
     color: #1D201F;
-    padding-top: 64px;
 }
 
 .about-profile-image {
@@ -333,6 +337,7 @@ body {
 #projects {
     width: 100%;
     min-height: 100vh;
+    padding: 64px 0;
     background: var(--bg-color);
     color: var(--text-color);
     display: flex;
@@ -341,27 +346,25 @@ body {
 }
 
 .projects-container {
-    width: 80%;
+    width: 100%;
     height: 100%;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    gap: 32px;
 }
 
 .projects-container > .card{
-   width: 300px;
+   width: 320px;
    min-height: 380px;
    padding: 16px;
    background-color: hsl(0, 0%, 100%);
    color: var(--bg-color);
    border-radius: 12px;
-   
 }
 
 .card .card-header {
-    width: 100%;
-    min-height: 30px;
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -380,7 +383,7 @@ body {
     width: 100%;
     height: 130px;
     min-height: 130px;
-    padding: 12px;
+    padding: 12px 0;
 }
 
 .card .card-body .project-desc{
@@ -392,7 +395,8 @@ body {
 .card .card-footer{ 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 16px;
     padding-top: 24px;
 }
 
@@ -509,9 +513,9 @@ body {
         margin-right: 6rem;
         margin-top: 32px;
     }
-    .about-profile-socials__header {
+    /* .about-profile-socials__header {
        
-    }
+    } */
     .about-profile-socials__card,
     .about-profile-skills__card {
         align-items: start;

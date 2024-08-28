@@ -77,6 +77,13 @@ const defaultProps = {
         origin: window.innerWidth > 768 ? "right" : "bottom",
       },
     },
+    {
+      element: ".projects-card",
+      animation: {
+        delay: window.innerWidth > 1000,
+        origin: window.innerWidth > 768 ? "left" : "bottom",
+      }
+    }
     // {
     //   element: ".contact-wrapper",
     //   animation: {
