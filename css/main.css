@@ -38,6 +38,14 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.icon {
+    font-size: 2rem;
+    color: var(--bg-contrast);
+}
+
+.icon:hover {
+    color: var(--bg-color);
+}
 #top {
     display: hidden;
 }
@@ -321,32 +329,62 @@ body {
 .about-profile-socials__header,
 .about-profile-skills__header {
     text-align: center;
+    text-transform: uppercase;
 }
 
-.about-profile-socials__card,
-.about-profile-skills__card {
+.about-profile-socials__header,
+.about-profile-skills__header {
+    text-align: start;
+    padding-left: 8px;
+    line-height: 1rem;
+    border-left: 3px solid var(--bg-contrast);
+    border-bottom: 3px solid var(--bg-contrast);
+    border-bottom-left-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.about-profile-socials__links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 12px;
+    justify-content: flex-start;
     align-items: center;
-    column-gap: 1rem;
-    row-gap: 2rem;
-    width: 100%;
-    min-height: 150px;
+    max-width: 280px;
 }
 
-.about-profile-socials__card > .card a {
-    text-decoration: none;
-    color: var(--bg-color);
+.about-profile-socials__links > .icon {
+    font-size: 3rem;
 }
 
-.about-profile-socials__card > .card,
-.about-profile-skills__card > .card {
-    width: 80px;
-    height: 80px;
+.about-profile-skills__icons {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 12px;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 270px;
+}
+
+.about-profile-skills,
+.about-profile-socials {
+    padding: 32px 0;
+}
+
+.about-profile-skills__icons > .icon {
+    font-size: 3rem;
+}
+
+.about-profile-skills__icons > .icon-less {
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--bg-color);
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /* PROJECT START */
@@ -549,16 +587,20 @@ body {
         grid-column: 3/ span 4;
     }
     .about-profile-socials {
+        max-width: 220px;
         grid-column: 1 /span 2;
+        align-self: start;
         margin-right: 6rem;
-        margin-top: 32px;
     }
-    .about-profile-socials__card,
-    .about-profile-skills__card {
+    .about-profile-socials__links > .icon {
+        font-size: 2rem;
+    }
+    .about-profile-skills__icons {
         align-items: start;
     }
     .about-profile-skills {
         grid-column: 3/span 4;
+        align-self: start;
     }
 
     .projects-container > .card {
