@@ -85,9 +85,16 @@ const defaultProps = {
       },
     },
     {
+      element: ".project-header",
+      animation: {
+        delay: 500,
+        origin: window.innerWidth > 768 ? "left" : "bottom",
+      }
+    },
+    {
       element: ".projects-card",
       animation: {
-        delay: window.innerWidth > 1000,
+        delay: 1000,
         origin: window.innerWidth > 768 ? "left" : "bottom",
       }
     }
