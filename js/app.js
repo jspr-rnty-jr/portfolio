@@ -57,7 +57,7 @@ const defaultProps = {
       },
     },
     {
-      element: ".about-profile-image",
+      element: ".about-profile__image",
       animation: {
         delay: 600,
         origin: "left",
@@ -71,7 +71,7 @@ const defaultProps = {
       },
     },
     {
-      element: ".about-profile-socials",
+      element: ".about-profile__socials",
       animation: {
         delay: window.innerWidth > 768 ? 1200 : 500,
         origin: window.innerWidth > 768 ? "left" : "bottom",

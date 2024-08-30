@@ -50,6 +50,14 @@ body {
     display: hidden;
 }
 
+.truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+}
+
 /* HEADER SECTION */
 
 #navbar {
@@ -293,25 +301,25 @@ body {
 /* ABOUT SECTION START */
 
 #about {
-    margin-top: -64px;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .about-container {
-    padding-top: 6rem;
     display: grid;
     justify-items: center;
     font-size: 0.9rem;
     color: #1D201F;
 }
 
-.about-profile-image {
+.about-profile__image {
     width: 200px;
     height: 230px;
     margin: 32px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.about-profile-image img {
+.about-profile__image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -322,17 +330,18 @@ body {
     font-size: 1.1rem;
 }
 
-.about-profile-summary {
+.about-profile-summary,
+.about-profile {
     padding: 32px;
 }
 
-.about-profile-socials__header,
+.about-profile__socials__header,
 .about-profile-skills__header {
     text-align: center;
     text-transform: uppercase;
 }
 
-.about-profile-socials__header,
+.about-profile__socials__header,
 .about-profile-skills__header {
     text-align: start;
     padding-left: 8px;
@@ -343,7 +352,7 @@ body {
     margin-bottom: 8px;
 }
 
-.about-profile-socials__links {
+.about-profile__socials__links {
     display: flex;
     flex-wrap: wrap;
     column-gap: 2rem;
@@ -353,7 +362,7 @@ body {
     max-width: 280px;
 }
 
-.about-profile-socials__links > .icon {
+.about-profile__socials__links > .icon {
     font-size: 3rem;
 }
 
@@ -367,8 +376,7 @@ body {
     max-width: 270px;
 }
 
-.about-profile-skills,
-.about-profile-socials {
+.about-profile-skills{
     padding: 32px 0;
 }
 
@@ -437,14 +445,12 @@ body {
 .card .card-body {
     width: 100%;
     height: 130px;
-    min-height: 130px;
     padding: 12px 0;
 }
 
 .card .card-body .project-desc {
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
 }
 
 .card .card-footer { 
@@ -573,24 +579,27 @@ body {
         align-items: center;
         grid-template-columns: repeat(4, 1fr);
     }
-    .about-profile-image {
+    .about-profile {
+        grid-column: 1 / span 2;
+    }
+    .about-profile__image {
         width: 350px;
         height: 350px;
-        margin-right: 6rem;
-        grid-column: 1/ span 2;
-        margin-top: 32px;
+        margin: 0 6rem 0 0;
+        align-self: start;
+        
     }
-    .about-profile-image img {
+    .about-profile__image img {
         height: 320px;
     }
     .about-profile-summary {
         grid-column: 3/ span 4;
     }
-    .about-profile-socials {
+    .about-profile__socials {
         max-width: 220px;
         grid-column: 1 /span 2;
-        align-self: start;
-        margin-right: 6rem;
+        padding-top: 32px;
+        margin-left: 4.2rem;
     }
     .about-profile-socials__links > .icon {
         font-size: 2rem;
@@ -599,8 +608,7 @@ body {
         align-items: start;
     }
     .about-profile-skills {
-        grid-column: 3/span 4;
-        align-self: start;
+        max-width: 270px;
     }
 
     .projects-container > .card {
