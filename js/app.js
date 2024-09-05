@@ -1,7 +1,7 @@
 import initParticles from './particlesJs/particles.js'
 import { defaultProps, targetElements } from './scrollRevealJs/data/scrollRevealConfig.js'
 import initScrollReveal from './scrollRevealJs/initScrollReveal.js';
-// import navbarToggleJS from './navbarToggle/navbarToggle.js';
+import navbarToggleJS from './navbarToggle/navbarToggle.js';
 
 // PARTICLES
 initParticles();
@@ -10,4 +10,4 @@ initParticles();
 initScrollReveal(targetElements, defaultProps);
 
 // Navbar Toggle
-// navbarToggleJS();
+navbarToggleJS();
