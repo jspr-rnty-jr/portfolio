@@ -10,4 +10,16 @@ initParticles();
 initScrollReveal(targetElements, defaultProps);
 
 // Navbar Toggle
-navbarToggleJS();
+// navbarToggleJS();
+
+const backToTopPointer = document.querySelector('.back-to-top');
+document.addEventListener('scrollend', () => {
+    backToTopPointer.classList.remove('hidden');
+
+    if(!backToTopPointer.classList.contains('hidden') && window.scrollY){
+        setTimeout(() => {
+            backToTopPointer.classList.add('hidden');
+            console.log('wuo')
+        }, 3000)
+    }
+})

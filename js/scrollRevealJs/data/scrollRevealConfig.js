@@ -46,7 +46,7 @@ export const targetElements = [
   {
     element: ".hero-cta",
     animation: {
-      delay: 1000,
+      delay: 1700,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
