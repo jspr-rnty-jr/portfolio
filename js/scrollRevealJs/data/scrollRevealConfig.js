@@ -86,7 +86,7 @@ export const targetElements = [
     }
   },
   {
-    element: ".projects-card",
+    element: ".project-card",
     animation: {
       delay: 1000,
       origin: window.innerWidth > 768 ? "left" : "bottom",

@@ -12,6 +12,7 @@ html.sr .load-hidden {
 :root {
     --bg-color: hsl(160, 5%, 12%);
     --text-color: hsl(0, 0%, 85%);
+    --text-color-light: hsl(0, 0%, 95%);
     --text-color-focus: white;
     --bg-contrast: hsl(160, 5%, 25%);
     --text-accent: hsl(101, 78%, 41%);
@@ -21,6 +22,7 @@ html.sr .load-hidden {
 body {
     font-family: "Montserrat", sans-serif;
     line-height: 1.6;
+    background-color: var(--text-color-light);
 }
 
 h1 {
@@ -40,9 +42,6 @@ p {
 }
 
 .card {
-    width: 100px;
-    min-width: 50px;
-    height: 95px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -123,6 +122,33 @@ p {
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;
 }
+
+.disable {
+    pointer-events: none;
+    cursor: default;
+    position: relative;
+    color: hsl(0, 0%, 60%) !important;
+}
+
+a.disable::before, a.disable::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: hsl(0, 100%, 75%);
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+a.disable::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+a.disable::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 
 /* HEADER SECTION */
 
@@ -357,16 +383,17 @@ p {
 }
 
 /* PROJECT START */
+
 #projects {
-    padding: 32px 16px;
     position: relative;
 }
 
 .project-header {
     position: absolute;
-    top: 32px;
+    top: 0;
     text-align: center;
     text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .projects-container {
@@ -377,18 +404,21 @@ p {
     align-items: center;
     justify-content: center;
     gap: 32px;
-    padding: 64px 0;
+    padding: 64px 32px;
 }
 
-.projects-container > .card {
-   flex: 1;
-   min-width: 250px;
-   max-width: 320px;
-   height: auto;
-   padding: 16px;
-   background-color: var(--text-color-focus);
-   color: var(--bg-color);
-   border-radius: 12px; 
+.project-card {
+    min-height: 380px;
+    width: 320px;
+    padding: 16px;
+    border-radius: 12px; 
+    color: var(--bg-color); 
+    display: flex;
+    flex-direction: column;
+}
+
+ .projects-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
@@ -397,42 +427,162 @@ p {
 }
 
 .card-header img {
-    width: 288px;
+    max-width: 288px;
+    width: 100%;
     height: 150px;
     object-fit: cover;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
 
+.card-header .project-title {
+    line-height: 1;
+    padding: 8px 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
 .card-body {
     width: 100%;
-    height: 130px;
-    padding: 12px 0;
+    height: 140px;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    scrollbar-gutter: stable;
+}
+
+.card-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track background color */
+    border-radius: 8px;  /* Rounded corners for the track */
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 8px; /* Rounded corners for the thumb */
+    border: 2px solid transparent; /* Creates some space around the thumb */
+}
+
+.card-body::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darken the thumb when hovered */
 }
 
 .card-body .project-desc {
-    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
 }
 
-.card-footer { 
-    padding-top: 24px;
+.card-footer {
+    width: 100%;
+    height: 100%;
+} 
+
+.project-links{
+    line-height: 0;
+    display: flex;
+    column-gap: 8px;
+    justify-content: flex-end;
 }
-.project-demo,
-.project-source-code {
-    position: relative;
-    left: 80%;
-    top: 0;
-    margin-left: 8px;
-    color: var(--bg-color);
+
+.project-links .project-demo,
+.project-links .project-source-code {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
     text-decoration: none;
-    transition: font-size 250ms ease-in-out;
+    color: var(--bg-contrast);
+    transition: color 250ms ease-in-out, transform 250ms ease-in-out; /* Transition for smooth color and transform changes */
 }
 
-.project-demo:hover,
-.project-source-code:hover {
-   font-size: 1.1rem;
-   color: var(--bg-contrast)
+.project-links .project-demo:hover,
+.project-links .project-source-code:hover {
+    color: var(--bg-color);
+    transform: scale(1.1);
 }
+
+.project-status{
+    line-height: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-status p {
+    font-size: 12px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+
+.project-status p .project-status__icon{
+    width: 30px;
+    height: 30px;
+}
+
+.tech-used {
+    margin: 8px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; 
+}
+
+.tech-used span {
+    padding: 0px 8px;
+    border-radius: 2px;
+    font-size: clamp(0.4rem, 2vw, 0.5rem);
+    color: var(--text-color-focus);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+/* Specific background colors for each technology */
+.tech-used__html {
+    background-color: #E34F26;
+}
+
+.tech-used .tech-used__js {
+    background-color: #F7DF1E;
+    color: #000;
+}
+
+.tech-used__css {
+    background-color: #2965F1;
+}
+
+.tech-used__npm {
+    background-color: #CB3837;
+}
+
+.tech-used .tech-used__react-js { 
+    background-color: #61DBFB;
+    color: #000;
+}
+
+.tech-used__node-js{
+    background-color: #339933;
+}
+
+.tech-used__express-js {
+    background-color: #000;
+}
+
+.tech-used__mongo-db {
+    background-color: #47A248;
+}
+
+/* Hover effect */
+.tech-used span:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add subtle shadow */
+}
+
+/* PROJECT SECTION END */
 
 /* FOOTER START */
 
@@ -496,19 +646,20 @@ p {
     }
 
     .project-header {
-        top: 6rem;
+        font-size: 1.5rem;
     }
 
-    #projects, .projects-container{
-        padding: 0;
+    .projects-container{
+        min-height: 70vh;
+        padding: 64px 32px;
+    }
+    
+    .card-body .project-desc {
+        font-size: 1rem;
     }
 
     .card-footer a {
         width: 85px;
-        font-size: 1rem;
-    }
-
-    .card-body .project-desc {
         font-size: 1rem;
     }
 }
@@ -562,5 +713,11 @@ p {
     }
     .about-profile-skills {
         max-width: 270px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .projects-container {
+        min-height: 50vh;
     }
 }
