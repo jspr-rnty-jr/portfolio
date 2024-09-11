@@ -252,8 +252,12 @@ a.disable::after {
 .hero-tagline {
     font-size: 12px;
     text-transform: uppercase;
-    color: var(--text-color-focus);
+    color: var(--bg-color);
     margin-bottom: 2rem;
+    filter: drop-shadow(1px 0 0 var(--text-accent)) 
+    drop-shadow(0 1px 0 var(--text-accent))
+    drop-shadow(-1px 0 0 var(--text-accent)) 
+    drop-shadow(0 -1px 0 var(--text-accent));
 }
 
 .hero-name {
@@ -607,12 +611,14 @@ a.disable::after {
 /* FOOTER END */
 
 @media only screen and (min-width: 768px) { 
+    .hero-wrapper {
+        justify-content: center;
+    }
     .hero-heading {
         font-size: 3.6rem; 
         font-weight: 700;
         margin-bottom: 1rem;
     }
-
     .hero-subheading {
         font-size: 2.2rem;
         font-weight: 500;
@@ -665,6 +671,16 @@ a.disable::after {
 }
 
 @media only screen and (min-width: 992px) {
+    .hero-heading {
+        font-size: 5.5rem;
+    }
+    .hero-name {
+        font-size: 6rem;
+    }
+    .hero-subheading {
+         inline-size: 800px;
+         overflow-wrap: break-word;
+    }
     #about {
         display: flex;
         align-items: center;
@@ -719,5 +735,33 @@ a.disable::after {
 @media only screen and (min-width: 1200px) {
     .projects-container {
         min-height: 50vh;
+    }
+}
+
+@media only screen and (min-width: 1540px) {
+    .hero-content {
+        padding-left: 380px;
+    }
+    .hero-heading{
+        width: 100%;
+        font-size: 12rem;
+    }
+    .hero-name {
+        font-size: 14rem;
+    }
+    .hero-subheading {
+        inline-size: 1900px;
+        overflow-wrap: break-word;
+        font-size: 5rem;
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+    .hero-tagline {
+        font-size: 2.5rem;
+    }
+    .hero-cta a{
+        padding-left: 100px;
+        font-size: 3rem;
+        padding: 16px 32px;
     }
 }
