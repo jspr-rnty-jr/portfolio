@@ -153,6 +153,8 @@ a.disable::after {
 /* HEADER SECTION */
 
 #navbar {
+    display: flex;
+    align-items: center;
     position: fixed;
     height: var(--navbar-height);
     background-color: var(--bg-color);
@@ -166,8 +168,9 @@ a.disable::after {
 .navbar-container {
     display: flex;
     justify-content: flex-start;
-    height: 100%;
+    height: 80%;
     align-items: center;
+    padding-left: 32px;
 }
 
 .navbar-header{
@@ -610,7 +613,7 @@ a.disable::after {
 
 /* FOOTER END */
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 768px) {
     .hero-wrapper {
         justify-content: center;
     }
@@ -672,6 +675,14 @@ a.disable::after {
 }
 
 @media only screen and (min-width: 992px) {
+    #navbar {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-container{
+        width: 80%;
+        padding-left: 24px;
+    }
     .hero-content {
         width: 80%;
         display: flex;
@@ -739,7 +750,14 @@ a.disable::after {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {   
+    .navbar-logo img {
+        width: 38px;
+        height: 38px;
+    } 
+    .navbar-header p{
+        font-size: 1.7rem;
+    }
     .hero-heading{
         width: 100%;
         height: auto;
@@ -767,6 +785,19 @@ a.disable::after {
 }
 
 @media only screen and (min-width: 1540px) {
+    #navbar {
+        height: 150px;
+    }
+
+    .navbar-header .navbar-logo img {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .navbar-header p{
+        font-size: 3rem;
+    }
+
     .hero-heading{
         font-size: 9rem;
     }
